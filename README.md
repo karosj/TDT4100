@@ -1,2 +1,4 @@
 # TDT4100
-øvingsopplegg 
+Øvingsopplegg for faget.
+
+Inneholder alle øvingene (1-7)
