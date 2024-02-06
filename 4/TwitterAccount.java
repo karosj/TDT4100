@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class TwitterAccount {
 
     private String userName;
-    private ArrayList<TwitterAccount> follows = new ArrayList<TwitterAccount>();
+    private ArrayList<TwitterAccount> follows = new ArrayList<>();
     private int tweetCount;
     private int retweetCount;
-    private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+    private ArrayList<Tweet> tweets = new ArrayList<>();
 
     public TwitterAccount(String userName) {
         this.userName = userName;
@@ -48,15 +48,15 @@ public class TwitterAccount {
     }
 
     public void tweet(String text) {
-        Tweet nyTweet = new Tweet(this, text);
+        Tweet newTweet = new Tweet(this, text);
         this.tweetCount++;
-        this.tweets.add(0, nyTweet);
+        this.tweets.add(0, newTweet);
     }
 
     public void retweet(Tweet tweet) {
-        Tweet nyTweet = new Tweet(this, tweet);
-        nyTweet.getOriginalTweet().getOwner().incrementRetweetCount();
-        this.tweets.add(0, nyTweet);
+        Tweet newTweet = new Tweet(this, tweet);
+        newTweet.getOriginalTweet().getOwner().incrementRetweetCount();
+        this.tweets.add(0, newTweet);
         this.tweetCount++;
     }
 
