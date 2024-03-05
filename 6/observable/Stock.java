@@ -1,4 +1,4 @@
-package oving6.observable;
+package observable;
 
 import java.util.ArrayList;
 import java.util.Collection;
